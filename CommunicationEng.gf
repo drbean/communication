@@ -1,0 +1,126 @@
+--# -path=.:./engine:/home/drbean/GF/lib/src/translator:present
+
+concrete CommunicationEng of Communication = MyConcrete  **
+open ConstructorsEng, ParadigmsEng, StructuralEng, IrregEng, ExtraEng, ConstructX, Prelude, (R=ResEng) in {
+
+-- oper
+
+lin
+
+-- Adv
+
+	up	= mkAdv "up";
+	very	= mkAdv "very";
+	well	= mkAdv "well";
+	sometimes	= mkAdv "sometimes";
+	so	= mkAdv "so";
+	always	= mkAdv "always";
+	for_example	= mkAdv "for example";
+	however	= mkAdv "however";
+	indeed	= mkAdv "indeed";
+	often	= mkAdv "often";
+	on_the_other_hand	= mkAdv "on the other hand";
+
+-- AP
+
+	terrific	= mkAP( mkA "terrific") ;
+	yes_but	= mkAP( mkA "'Yes, but'") ;
+	articulate	= mkAP( mkA "articulate") ;
+	good_at	= mkAP( mkA "good at") ;
+	inter_personal	= mkAP( mkA "inter-personal") ;
+	lousy	= mkAP( mkA "lousy") ;
+	non_judgmental	= mkAP( mkA "non-judgmental") ;
+	other	= mkAP( mkA "other") ;
+	own	= mkAP( mkA "own") ;
+	persuasive	= mkAP( mkA "persuasive") ;
+	really	= mkAP( mkA "really") ;
+	second	= mkAP( mkA "second") ;
+
+-- Conj
+
+	and	= mkConj "and";
+	but	= mkConj "but";
+
+-- Det
+
+
+-- N
+
+	student	= mkN2( mkN "student") ;
+	tension_between	= mkN2( mkN "tension between") ;
+	understanding	= mkN2( mkN "understanding") ;
+	way	= mkCN( mkN "way") ;
+	side	= mkCN( mkN "side") ;
+	someone	= mkN "someone" nonExist;
+	ability	= mkCN( mkN "ability") ;
+	accommodation_mode	= mkN "accommodation mode" nonExist;
+	argument	= mkCN( mkN "argument") ;
+	assertion	= mkN "assertion" nonExist;
+	assertiveness	= mkN "assertiveness" nonExist;
+	capacity	= mkCN( mkN "capacity") ;
+	concern	= mkCN( mkN "concern") ;
+	empathy	= mkN "empathy" nonExist;
+	interest	= mkCN( mkN "interest") ;
+	kind	= mkN2( mkN "kind") ;
+	law_student	= mkCN( mkN "law student") ;
+	listener	= mkCN( mkN "listener") ;
+	listening	= mkN "listening" nonExist;
+	mind	= mkCN( mkN "mind") ;
+	need	= mkCN( mkN "need") ;
+	negotiation	= mkN "negotiation" nonExist;
+	negotiation_coach	= mkCN( mkN "negotiation coach") ;
+	one	= mkN "one" nonExist;
+	perspective	= mkCN( mkN "perspective") ;
+	problem	= mkN2( mkN "problem") ;
+	rebuttal's	= mkCN( mkN "rebuttal's") ;
+	relations	= mkCN( mkN "relations") ;
+	repertoire	= mkCN( mkN "repertoire") ;
+	shoe	= mkCN( mkN "shoe") ;
+
+-- PN
+
+	mnookin	= mkPN( mkN feminine (mkN "Mnookin") );
+
+-- Prep
+
+	to	= mkPrep "to";
+	with_prep	= mkPrep "with";
+	as	= mkPrep "as";
+	by	= mkPrep "by";
+	in_prep	= mkPrep "in";
+	into	= mkPrep "into";
+
+-- Pron
+
+	both	= mkNP (mkDet (mkQuant nonExist "both" nonExist "both"));
+
+-- Subj
+
+	once	= mkSubj "once";
+
+-- V
+
+	stand	= partV( mkV "stand") "";
+	understand	= mkV2( mkV "understand") noPrep;
+	call	= mkV3( mkV "call") ;
+	compose	= mkV2( mkV "compose") noPrep;
+	defend	= mkV2( mkV "defend") noPrep;
+	describe	= mkV2( mkV "describe") noPrep;
+	do	= mkV2( mkV "do") noPrep;
+	expand	= mkV2( mkV "expand") noPrep;
+	fall	= mkV2( mkV "fall") into;
+	have_to	= mkVV( mkV "have") ;
+	help	= mkV2V( mkV "help") noPrep noPrep;
+	learn	= mkV2( mkV "learn") noPrep;
+	listen	= mkV2( mkV "listen") noPrep;
+	lose	= mkV2( mkV "lose") noPrep;
+	making	= mkV2( mkV "making") noPrep;
+	managing	= mkV2( mkV "managing") noPrep;
+	may	= mkVV( mkV "may") ;
+	mean	= mkV2( mkV "mean") noPrep;
+	put	= mkV3( mkV "put") ;
+	relate	= mkV2( mkV "relate") noPrep;
+
+}
+
+-- vim: set ts=2 sts=2 sw=2 noet:
