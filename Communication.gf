@@ -8,7 +8,7 @@ fun
 -- Adv
 
 	up	: Adv;
-	very	: Adv;
+	very	: AdA;
 	well	: Adv;
 	sometimes	: Adv;
 	so	: Adv;
@@ -24,7 +24,7 @@ fun
 	terrific	: AP;
 	yes_but	: AP;
 	articulate	: AP;
-	good_at	: AP;
+	good_at	: A2;
 	inter_personal	: AP;
 	lousy	: AP;
 	non_judgmental	: AP;
@@ -81,6 +81,8 @@ fun
 
 -- Prep
 
+	between	: Prep;
+	at	: Prep;
 	to	: Prep;
 	with_prep	: Prep;
 	as	: Prep;
@@ -112,7 +114,7 @@ fun
 	learn	: V2;
 	listen	: V2;
 	lose	: V2;
-	making	: V2;
+	make	: V2;
 	managing	: V2;
 	may	: VV;
 	mean	: V2;

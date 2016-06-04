@@ -26,7 +26,7 @@ lin
 	terrific	= mkAP( mkA "terrific") ;
 	yes_but	= mkAP( mkA "'Yes, but'") ;
 	articulate	= mkAP( mkA "articulate") ;
-	good_at	= mkAP( mkA "good at") ;
+	good_at	= mkA2( mkA "good") at;
 	inter_personal	= mkAP( mkA "inter-personal") ;
 	lousy	= mkAP( mkA "lousy") ;
 	non_judgmental	= mkAP( mkA "non-judgmental") ;
@@ -47,7 +47,7 @@ lin
 -- N
 
 	student	= mkN2( mkN "student") ;
-	tension_between	= mkN2( mkN "tension between") ;
+	tension_between	= mkN2( mkN "tension") between;
 	understanding	= mkN2( mkN "understanding") ;
 	way	= mkCN( mkN "way") ;
 	side	= mkCN( mkN "side") ;
@@ -83,6 +83,8 @@ lin
 
 -- Prep
 
+	between	= mkPrep "between";
+	at	= mkPrep "at";
 	to	= mkPrep "to";
 	with_prep	= mkPrep "with";
 	as	= mkPrep "as";
@@ -114,11 +116,11 @@ lin
 	learn	= mkV2( mkV "learn") noPrep;
 	listen	= mkV2( mkV "listen") noPrep;
 	lose	= mkV2( mkV "lose") noPrep;
-	making	= mkV2( mkV "making") noPrep;
+	make	= mkV2( mkV "make" "made") noPrep;
 	managing	= mkV2( mkV "managing") noPrep;
 	may	= mkVV( mkV "may") ;
 	mean	= mkV2( mkV "mean") noPrep;
-	put	= mkV3( mkV "put") ;
+	put	= mkV3 (reflV (mkV "put")) noPrep in_prep;
 	relate	= mkV2( mkV "relate") noPrep;
 
 }

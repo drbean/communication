@@ -173,6 +173,7 @@ prep = [
 	"to"
 	, "with"
 	, "as"
+	, "between"
 	, "by"
 	, "in"
 	, "into"
@@ -221,7 +222,7 @@ v = [
 	, "learn"
 	, "listen"
 	, "lose"
-	, "making"
+	, "make"
 	, "managing"
 	, "may"
 	, "mean"
@@ -241,6 +242,7 @@ articulate	: A;
 as	: Prep;
 assertion	: N;
 assertiveness	: N;
+between	: Prep;
 both	: Pron;
 but	: Conj;
 by	: Prep;
