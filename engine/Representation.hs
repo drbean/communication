@@ -32,18 +32,8 @@ int2ref n = DRSRef ("r" ++ show n )
 
 lc_first :: String -> String
 lc_first str@(s:ss) = if any (flip isPrefixOf str) [
-	"Area 51"
-	, "Los Angeles"
-	, "the Earth"
-	, "Houston"
-	, "Levinson"
-	, "London"
-	, "Moscow"
-	, "New York"
-	, "Paris"
-	, "Washington"
-	, "Independence Day"
-	, "July" ]
+	"Mnookin"
+	 ]
 	then s:ss
 	else toLower s:ss
 

@@ -101,6 +101,7 @@ fun
 	NomCl : NounCl -> NP;
 	Mannered	: NP -> PP_manner -> NP;
 	Sourced	: NP -> PP_source -> NP;
+	Themed	: NP -> PP_theme -> NP;
 	AdV_VP	: AdV -> VP -> VP;
 	WithPlace	:  V -> PP_location -> VP;
 	WithTime	: Time -> VP -> VP;

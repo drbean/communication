@@ -71,7 +71,7 @@ dic_test = [
 
       "The second tension is one that really relates to inter-personal relations. "
 			, "The second tension is the tension between empathy and assertiveness."
-			, "By empathy, what Mnookin means is the ability to describe your understanding of the other person's needs , interests and concerns in a non-judgmental way."
+			, "What Mnookin means by empathy is the ability to describe your understanding of the other person's needs , interests and concerns in a non-judgmental way."
 			, "By assertiveness, Mnookin means the capacity to articulate your own needs and interests and concerns in a persuasive way."
       , "Some people, for example, some of Mnookin's law students, are terrific at assertion."
 			, "Mnookin's law students are very good at making arguments."

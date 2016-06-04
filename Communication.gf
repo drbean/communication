@@ -86,7 +86,7 @@ fun
 	to	: Prep;
 	with_prep	: Prep;
 	as	: Prep;
-	by	: Prep;
+	by	: ThemePrep;
 	in_prep	: Prep;
 	into	: Prep;
 
