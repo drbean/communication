@@ -24,7 +24,7 @@ lin
 
 -- AP
 
-	terrific	= mkAP( mkA "terrific") ;
+	terrific	= mkA2( mkA "terrific") at;
 	yes_but	= mkAP( mkA "'Yes, but'") ;
 	articulate	= mkAP( mkA "articulate") ;
 	good_at	= mkA2( mkA "good") at;

@@ -22,7 +22,7 @@ fun
 
 -- AP
 
-	terrific	: AP;
+	terrific	: A2;
 	yes_but	: AP;
 	articulate	: AP;
 	good_at	: A2;
