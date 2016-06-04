@@ -218,9 +218,9 @@ oper
 			g = noun.g
 		};
 
-	myApposNP : (np1 : NP) -> (np2 : NP) -> { s : NPCase => Str ; a : Agr } =
-		\np1,np2 ->
-		{s = \\n => np1.s ! n ++ np2.s ! n ; a = np1.a} ;
+	myApposNP : (np1 : NP) -> (insert : Str) -> (np2 : NP) -> { s : NPCase => Str ; a : Agr } =
+		\np1,insert,np2 ->
+		{s = \\n => np1.s ! n ++ insert ++ np2.s ! n; a = np1.a};
 
   myAdjAsCN : (ap : AP) -> { s : Number => Case => Str ; g : Gender } =
 		\ap ->
@@ -408,7 +408,7 @@ lin
 	MassItem udet ucn	= mkNP udet ucn;
 	Titular cn = mkNP cn;
 	PredetItem predet np	= mkNP predet np;
-	ApposNP np1 np2 = myApposNP np1 np2;
+	ApposNP np1 np2 = myApposNP np1 "for example" np2;
 	NPPostPredet np predet = myNPPostPredet np predet;
 
 	a_Det	= a_Det;
