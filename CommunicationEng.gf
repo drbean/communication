@@ -52,12 +52,12 @@ lin
 	way	= mkCN( mkN "way") ;
 	side	= mkCN( mkN "side") ;
 	someone	= mkN "someone" nonExist;
-	ability	= mkCN( mkN "ability") ;
+	ability	= mkN2( mkN "ability") to;
 	accommodation_mode	= mkN "accommodation mode" nonExist;
 	argument	= mkCN( mkN "argument") ;
 	assertion	= mkN "assertion" nonExist;
 	assertiveness	= mkN "assertiveness" nonExist;
-	capacity	= mkCN( mkN "capacity") ;
+	capacity	= mkN2( mkN "capacity") to;
 	concern	= mkCN( mkN "concern") ;
 	empathy	= mkN "empathy" nonExist;
 	interest	= mkCN( mkN "interest") ;
@@ -90,6 +90,8 @@ lin
 	as	= mkPrep "as";
 	by	= mkPrep "by";
 	in_prep	= mkPrep "in";
+	in_manner	= mkPrep "in";
+	in_loc	= mkPrep "in";
 	into	= mkPrep "into";
 
 -- Pron
@@ -120,8 +122,8 @@ lin
 	managing	= mkV2( mkV "managing") noPrep;
 	may	= mkVV( mkV "may") ;
 	mean	= mkV2( mkV "mean") noPrep;
-	put	= mkV3 (reflV (mkV "put")) noPrep in_prep;
-	relate	= mkV2( mkV "relate") noPrep;
+	put	= mkV3 (reflV (mkV "put")) noPrep in_loc;
+	relate	= mkV2( mkV "relate") to;
 
 }
 

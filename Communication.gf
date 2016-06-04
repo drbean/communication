@@ -50,12 +50,12 @@ fun
 	way	: CN;
 	side	: CN;
 	someone	: N;
-	ability	: CN;
+	ability	: N2;
 	accommodation_mode	: N;
 	argument	: CN;
 	assertion	: N;
 	assertiveness	: N;
-	capacity	: CN;
+	capacity	: N2;
 	concern	: CN;
 	empathy	: N;
 	interest	: CN;
@@ -88,6 +88,8 @@ fun
 	as	: Prep;
 	by	: ThemePrep;
 	in_prep	: Prep;
+	in_manner	: MannerPrep;
+	in_loc	: LocPrep;
 	into	: Prep;
 
 -- Pron

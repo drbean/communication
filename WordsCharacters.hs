@@ -171,6 +171,7 @@ pron = [
 prep = [
 
 	"to"
+	, "at"
 	, "with"
 	, "as"
 	, "between"
@@ -242,6 +243,7 @@ articulate	: A;
 as	: Prep;
 assertion	: N;
 assertiveness	: N;
+at	: Prep;
 between	: Prep;
 both	: Pron;
 but	: Conj;
