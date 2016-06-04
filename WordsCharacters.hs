@@ -45,7 +45,6 @@ a = [
 	, "other"
 	, "own"
 	, "persuasive"
-	, "really"
 	, "second"
 
 	]
@@ -63,6 +62,7 @@ adv = [
 	, "indeed"
 	, "often"
 	, "on the other hand"
+	, "really"
 
 	]
 
@@ -300,7 +300,7 @@ perspective	: CN;
 persuasive	: A;
 problem	: N2;
 put	: V3;
-really	: A;
+really	: Adv;
 rebuttal	: CN;
 relate	: V2;
 relation	: CN;

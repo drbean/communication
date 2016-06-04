@@ -9,6 +9,7 @@ lin
 
 -- Adv
 
+	really	= mkAdv "really";
 	up	= mkAdv "up";
 	very	= mkAdv "very";
 	well	= mkAdv "well";
@@ -33,7 +34,6 @@ lin
 	other	= mkAP( mkA "other") ;
 	own	= mkAP( mkA "own") ;
 	persuasive	= mkAP( mkA "persuasive") ;
-	really	= mkAP( mkA "really") ;
 	second	= mkAP( mkA "second") ;
 
 -- Conj

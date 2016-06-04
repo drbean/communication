@@ -7,6 +7,7 @@ fun
 
 -- Adv
 
+	really	: AdV;
 	up	: Adv;
 	very	: AdA;
 	well	: Adv;
@@ -31,7 +32,6 @@ fun
 	other	: AP;
 	own	: AP;
 	persuasive	: AP;
-	really	: AP;
 	second	: AP;
 
 -- Conj
