@@ -71,7 +71,7 @@ fun
 	perspective	: CN;
 	problem	: N2;
 	rebuttal's	: CN;
-	relations	: CN;
+	relation	: CN;
 	repertoire	: CN;
 	shoe	: CN;
 

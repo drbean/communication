@@ -73,7 +73,7 @@ lin
 	perspective	= mkCN( mkN "perspective") ;
 	problem	= mkN2( mkN "problem") ;
 	rebuttal's	= mkCN( mkN "rebuttal's") ;
-	relations	= mkCN( mkN "relations") ;
+	relation	= mkCN( mkN "relation") ;
 	repertoire	= mkCN( mkN "repertoire") ;
 	shoe	= mkCN( mkN "shoe") ;
 
