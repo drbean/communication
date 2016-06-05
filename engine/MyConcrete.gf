@@ -177,6 +177,14 @@ oper
 		c = npNom
 		};
 
+	myFreeToLessCl :  (vp : VP) -> {s : ResEng.Tense => Anteriority => CPolarity => Order => Str; c : NPCase } =
+		\vp -> let cl = 
+    infVP VVAux vp Simul CPos (agrP3 Sg) ; --- agr
+	in {
+		s = \\t,a,p,_ => cl ;
+		c = npNom
+		};
+
 	mymkNP : (ncl : NounCl) -> {s : NPCase => Str ; a : Agr} =
 		\ncl -> let string = ncl.s ! Pres ! Simul ! CPos ! oDir ;
 								agreement = toAgr Sg P3 Neutr in {
