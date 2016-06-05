@@ -207,8 +207,8 @@ tag = [
 
 v = [
 
-	, "articulate"
 	"stand"
+	, "articulate"
 	, "understand"
 	, "call"
 	, "can"
