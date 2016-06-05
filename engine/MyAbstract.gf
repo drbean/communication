@@ -104,6 +104,7 @@ fun
 	Sourced	: NP -> PP_source -> NP;
 	Themed	: NP -> PP_theme -> NP;
 	AdV_VP	: AdV -> VP -> VP;
+	AdV_VPSlash	: AdV -> VPSlash -> VPSlash;
 	WithPlace	:  V -> PP_location -> VP;
 	WithTime	: Time -> VP -> VP;
 	VP_PP_coagent	: VP -> PP_coagent -> VP;

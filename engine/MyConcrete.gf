@@ -1,4 +1,4 @@
-concrete MyConcrete of MyAbstract = CatEng ** open ResEng, Prelude, SyntaxEng, (P = ParadigmsEng), ExtraEng, IrregEng, ExtensionsEng in {
+concrete MyConcrete of MyAbstract = CatEng ** open ResEng, Prelude, SyntaxEng, (P = ParadigmsEng), VerbEng, ExtraEng, IrregEng, ExtensionsEng in {
 
 lincat
 	ListNP	= ListNP;
@@ -354,6 +354,7 @@ lin
 	Sourced np adv	= mkNP np adv;
 	Themed np adv	= mkNP np adv;
 	AdV_VP adv vp = mkVP adv vp;
+	AdV_VPSlash adv vps = AdVVPSlash adv vps;
   WithPlace v located	= mkVP (mkVP v) located;
   AdvVP adv vp	= mkVP adv vp;
 	VPAdv vp adv = mkVP vp adv;
