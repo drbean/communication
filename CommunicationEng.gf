@@ -95,7 +95,7 @@ lin
 
 -- Pron
 
-	both	= mkNP (mkDet (mkQuant nonExist "both" nonExist "both"));
+	both	= mkNP (mkDet (mkQuant "one" "both") plNum);
 
 -- Subj
 
