@@ -17,7 +17,7 @@ fun
 	for_example	: Adv;
 	however	: Adv;
 	indeed	: Adv;
-	often	: Adv;
+	often	: AdV;
 	on_the_other_hand	: Adv;
 
 -- AP
@@ -84,7 +84,7 @@ fun
 	at	: Prep;
 	to	: Prep;
 	with_prep	: PatientPrep;
-	as	: Prep;
+	as	: MannerPrep;
 	by	: ThemePrep;
 	in_prep	: Prep;
 	in_manner	: MannerPrep;
