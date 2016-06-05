@@ -117,6 +117,7 @@ fun
 	VPAlready	: VP -> VP;
 	WithClPre	: SubordCl -> S -> S;
 	WithAdvPre	: Adv -> S -> S;
+	ThemePre	: PP_theme -> S -> S;
 
 	ICompS	: IComp -> NP -> QS;
 	YN	: Cl -> QCl;

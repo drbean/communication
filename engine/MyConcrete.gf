@@ -368,6 +368,7 @@ lin
 	VPAlready vp = myVPPlus vp "already";
 	WithClPre cl s = mkS cl s;
 	WithAdvPre adv s = mkS adv s;
+	ThemePre adv s = mkS adv s;
   -- Be_made_sth vp np = PassV3 vp np;
 
 	ICompS i np = mkQS (mkQCl i np);
