@@ -279,7 +279,8 @@ oper
 				Pl => table {
 					_ => nonExist }
 			};
-			g = Neutr
+			g = Neutr;
+			lock_N = {}
 		} ;
 
 
