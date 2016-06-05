@@ -10,7 +10,7 @@ fun
 	really	: AdV;
 	up	: Adv;
 	very	: AdA;
-	well	: Adv;
+	well	: PP_manner;
 	sometimes	: Adv;
 	so	: Adv;
 	always	: Adv;
