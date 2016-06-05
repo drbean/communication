@@ -20,6 +20,7 @@ cat
 	TimePrep;
 	SourcePrep;
 	ResultPrep;
+	PatientPrep;
 	Adv_coagent;
 	Adv_instrument;
 	Adv_theme;
@@ -28,6 +29,7 @@ cat
 	Adv_location;
 	Adv_source;
 	Adv_result;
+	Adv_patient;
 	MassDet;
 	SubordCl;
 	Partitive;
@@ -54,6 +56,7 @@ fun
 	Timing		: TimePrep -> NP -> Adv_time;
 	Sourcing		: SourcePrep -> NP -> Adv_source;
 	Resulting		: ResultPrep -> NP -> Adv_result;
+	Patienting		: PatientPrep -> NP -> Adv_patient;
 	Happening	: V -> VP ;
 	Changing	: V2 -> NP -> VP;
 	V_NP_VP:	V2V -> NP -> VP -> VP;
@@ -120,6 +123,7 @@ fun
 	WithClPre	: SubordCl -> S -> S;
 	WithAdvPre	: Adv -> S -> S;
 	ThemePre	: Adv_theme -> S -> S;
+	PatientPre	: Adv_patient -> S -> S;
 
 	ICompS	: IComp -> NP -> QS;
 	YN	: Cl -> QCl;

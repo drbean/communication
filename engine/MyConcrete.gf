@@ -21,6 +21,7 @@ lincat
 	LocPrep	= Prep;
 	SourcePrep	= Prep;
 	ResultPrep	= Prep;
+	PatientPrep	= Prep;
 	Adv_coagent	= Adv;
 	Adv_instrument	= Adv;
 	Adv_theme	= Adv;
@@ -29,6 +30,7 @@ lincat
 	Adv_location	= Adv;
 	Adv_source	= Adv;
 	Adv_result	= Adv;
+	Adv_patient	= Adv;
 	MassDet = Det;
 	Partitive = N2;
 
@@ -304,6 +306,7 @@ lin
 	Timing prep time = mkAdv prep time;
 	Sourcing prep source = mkAdv prep source;
 	Resulting prep result = mkAdv prep result;
+	Patienting prep result = mkAdv prep result;
 	Happening action	=	mkVP action;
 	Changing action patient	= mkVP action patient;
 	V_NP_VP causal patient predicate	= mkVP causal patient predicate;
@@ -372,6 +375,7 @@ lin
 	WithClPre cl s = mkS cl s;
 	WithAdvPre adv s = mkS adv s;
 	ThemePre adv s = mkS adv s;
+	PatientPre adv s = mkS adv s;
   -- Be_made_sth vp np = PassV3 vp np;
 
 	ICompS i np = mkQS (mkQCl i np);

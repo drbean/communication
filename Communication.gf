@@ -83,7 +83,7 @@ fun
 	between	: Prep;
 	at	: Prep;
 	to	: Prep;
-	with_prep	: Prep;
+	with_prep	: PatientPrep;
 	as	: Prep;
 	by	: ThemePrep;
 	in_prep	: Prep;
