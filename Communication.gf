@@ -117,7 +117,7 @@ fun
 	listen	: V2;
 	lose	: V2;
 	make	: V2;
-	managing	: V2;
+	manage	: V2;
 	may	: VV;
 	mean	: V2;
 	put	: V3;

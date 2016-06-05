@@ -119,7 +119,7 @@ lin
 	listen	= mkV2( mkV "listen") noPrep;
 	lose	= mkV2( mkV "lose") noPrep;
 	make	= mkV2( mkV "make" "made") noPrep;
-	managing	= mkV2( mkV "managing") noPrep;
+	manage	= mkV2( mkV "manage") noPrep;
 	may	= mkVV( mkV "may") ;
 	mean	= mkV2( mkV "mean") noPrep;
 	put	= mkV3 (mkV "put") noPrep in_prep;
