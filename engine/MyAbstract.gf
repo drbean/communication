@@ -92,6 +92,7 @@ fun
 	ThatNP	: Cl -> NP;
 	PartN	: V -> N;
 	Gerund	: VP -> NP;
+	GerundSlash	: VPSlash -> CN;
 	ByGerund : VP -> PP_manner;
 	SClSlash	: NP -> VPSlash -> ClSlash;
 	-- VPClSlash	: VPSlash -> ClSlash;
@@ -201,6 +202,7 @@ fun
 	its	: Det;
 	your	: Det;
 	their	: Det;
+	this	: Det;
 
 	he	: NP;
 	she	: NP;

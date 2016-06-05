@@ -341,6 +341,7 @@ lin
 	ThatNP cl	= myCltoNP "that" cl;
 	PartN v	= myPartN v;
 	Gerund vp = GerundNP vp;
+	GerundSlash vp = GerundCN vp;
 	ByGerund vp = ByVP vp;
 	SClSlash	np vpslash = mkClSlash np vpslash;
 	-- VPClSlash	vpslash = mkClSlash vpslash;
@@ -450,6 +451,7 @@ lin
 	its	= mkDet it_Pron;
 	your	= mkDet youSg_Pron;
 	their	= mkDet they_Pron;
+	this	= mkDet this_Quant;
 
 	she = mkNP she_Pron;
 	he = mkNP he_Pron;
