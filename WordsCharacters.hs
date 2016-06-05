@@ -37,7 +37,6 @@ a = [
 
 	"terrific"
 	, "'Yes, but'"
-	, "articulate"
 	, "good at"
 	, "inter-personal"
 	, "lousy"
@@ -208,6 +207,7 @@ tag = [
 
 v = [
 
+	, "articulate"
 	"stand"
 	, "understand"
 	, "call"
@@ -239,7 +239,7 @@ accommodation mode	: N;
 always	: Adv;
 and	: Conj;
 argument	: CN;
-articulate	: A;
+articulate	: V2;
 as	: Prep;
 assertion	: N;
 assertiveness	: N;

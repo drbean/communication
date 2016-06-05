@@ -26,7 +26,6 @@ lin
 
 	terrific	= mkA2( mkA "terrific") at;
 	yes_but	= mkAP( mkA "'Yes, but'") ;
-	articulate	= mkAP( mkA "articulate") ;
 	good_at	= mkA2( mkA "good") at;
 	inter_personal	= mkAP( mkA "inter-personal") ;
 	lousy	= mkAP( mkA "lousy") ;
@@ -104,6 +103,7 @@ lin
 
 -- V
 
+	articulate	= mkV2( mkV "articulate") noPrep;
 	stand	= partV( mkV "stand") "";
 	understand	= mkV2( mkV "understand") noPrep;
 	call	= mkV3( mkV "call") ;

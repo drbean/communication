@@ -24,7 +24,6 @@ fun
 
 	terrific	: A2;
 	yes_but	: AP;
-	articulate	: AP;
 	good_at	: A2;
 	inter_personal	: AP;
 	lousy	: AP;
@@ -102,6 +101,7 @@ fun
 
 -- V
 
+	articulate	: V2;
 	stand	: V;
 	understand	: V2;
 	call	: V3;
