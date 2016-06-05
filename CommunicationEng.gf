@@ -122,7 +122,7 @@ lin
 	managing	= mkV2( mkV "managing") noPrep;
 	may	= mkVV( mkV "may") ;
 	mean	= mkV2( mkV "mean") noPrep;
-	put	= mkV3 (reflV (mkV "put")) noPrep in_loc;
+	put	= mkV3 (reflV (mkV "put")) noPrep in_prep;
 	relate	= mkV2( mkV "relate") to;
 
 }
