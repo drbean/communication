@@ -99,9 +99,9 @@ fun
 	ByGerund : VP -> Adv_manner;
 	SClSlash	: NP -> VPSlash -> ClSlash;
 	-- VPClSlash	: VPSlash -> ClSlash;
-	FreeRCl : IP -> VP -> NounCl;
-	FreeRClSlash : IP -> ClSlash -> NounCl;
-	FreeInfCl	: IAdv -> VP -> NounCl;
+	FreeICl : IP -> VP -> NounCl;
+	FreeIClSlash : IP -> ClSlash -> NounCl;
+	FreeInfICl	: IAdv -> VP -> NounCl;
 	NomCl : NounCl -> NP;
 	Mannered	: NP -> Adv_manner -> NP;
 	Sourced	: NP -> Adv_source -> NP;

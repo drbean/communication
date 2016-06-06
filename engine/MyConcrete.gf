@@ -157,27 +157,27 @@ oper
 			g = cn.g
 			};
 
-	myFreeRClSlash : (ip : IP) -> (cl : ClSlash) -> {s : ResEng.Tense => Anteriority => CPolarity => Order => Str; c : NPCase } =
+	myFreeIClSlash : (ip : IP) -> (cl : ClSlash) -> {s : ResEng.Tense => Anteriority => CPolarity => Order => Str; c : NPCase } =
 	\ip,cl -> {
 	  s = \\t,a,p,_ => ip.s ! npNom ++ cl.s ! t ! a ! p ! oDir ++ cl.c2;
 		  c = npNom
 			  } ;
 
-	myFreeRCl : (ip : IP) -> (vp : VP) -> {s : ResEng.Tense => Anteriority => CPolarity => Order => Str; c : NPCase } =
+	myFreeICl : (ip : IP) -> (vp : VP) -> {s : ResEng.Tense => Anteriority => CPolarity => Order => Str; c : NPCase } =
 		\ip,vp -> let qcl = WH_Pred ip vp in
 	{
 	  s = \\t,a,p,_ => qcl.s ! t ! a ! p ! QDir ;
 		  c = npNom
 			  };
 
-	myFreeInfCl : (iadv : IAdv) -> (vp : VP) -> {s : ResEng.Tense => Anteriority => CPolarity => Order => Str; c : NPCase } =
+	myFreeInfICl : (iadv : IAdv) -> (vp : VP) -> {s : ResEng.Tense => Anteriority => CPolarity => Order => Str; c : NPCase } =
 		\iadv,vp -> let qcl = mkSC vp in
 	{
 		s = \\t,a,p,_ => iadv.s ++ qcl.s ;
 		c = npNom
 		};
 
-	myFreeToLessCl :  (vp : VP) -> {s : ResEng.Tense => Anteriority => CPolarity => Order => Str; c : NPCase } =
+	myFreeInfCl :  (vp : VP) -> {s : ResEng.Tense => Anteriority => CPolarity => Order => Str; c : NPCase } =
 		\vp -> let cl = 
     infVP VVAux vp Simul CPos (agrP3 Sg) ; --- agr
 	in {
@@ -357,8 +357,8 @@ lin
 	ByGerund vp = ByVP vp;
 	SClSlash	np vpslash = mkClSlash np vpslash;
 	-- VPClSlash	vpslash = mkClSlash vpslash;
-	FreeRCl ip vp = myFreeRCl ip vp;
-	FreeRClSlash ip cl = myFreeRClSlash ip cl;
+	FreeICl ip vp = myFreeICl ip vp;
+	FreeIClSlash ip cl = myFreeIClSlash ip cl;
 	FreeInfCl iadv vp = myFreeInfCl iadv vp;
 	NomCl ncl = mymkNP ncl;
 	Mannered np adv = mkNP np adv;
