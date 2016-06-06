@@ -359,7 +359,7 @@ lin
 	-- VPClSlash	vpslash = mkClSlash vpslash;
 	FreeICl ip vp = myFreeICl ip vp;
 	FreeIClSlash ip cl = myFreeIClSlash ip cl;
-	FreeInfCl iadv vp = myFreeInfCl iadv vp;
+	FreeInfICl iadv vp = myFreeInfICl iadv vp;
 	NomCl ncl = mymkNP ncl;
 	Mannered np adv = mkNP np adv;
 	Sourced np adv	= mkNP np adv;
