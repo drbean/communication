@@ -360,6 +360,7 @@ lin
 	FreeICl ip vp = myFreeICl ip vp;
 	FreeIClSlash ip cl = myFreeIClSlash ip cl;
 	FreeInfICl iadv vp = myFreeInfICl iadv vp;
+	FreeInfCl vp	= myFreeInfCl vp;
 	NomCl ncl = mymkNP ncl;
 	Mannered np adv = mkNP np adv;
 	Sourced np adv	= mkNP np adv;

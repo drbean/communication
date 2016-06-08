@@ -102,6 +102,7 @@ fun
 	FreeICl : IP -> VP -> NounCl;
 	FreeIClSlash : IP -> ClSlash -> NounCl;
 	FreeInfICl	: IAdv -> VP -> NounCl;
+	FreeInfCl	: VP -> NounCl;
 	NomCl : NounCl -> NP;
 	Mannered	: NP -> Adv_manner -> NP;
 	Sourced	: NP -> Adv_source -> NP;
