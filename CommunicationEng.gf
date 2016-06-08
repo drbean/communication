@@ -78,7 +78,7 @@ lin
 
 -- PN
 
-	mnookin	= mkPN( mkN feminine (mkN "Mnookin") );
+	mnookin	= mkPN( mkN masculine (mkN "Mnookin") );
 
 -- Prep
 
