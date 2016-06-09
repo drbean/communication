@@ -16,14 +16,24 @@ import WordsCharacters
 
 -- import System.Environment.FindBin
 
-miss :: [String] -> IO ()
-miss ws = do
-	gr <- readPGF "./Communication.pgf"
-	let langs = languages gr
-	let lang = head langs
-	let morpho = buildMorpho gr lang
-	let miss = morphoMissing morpho ws
-	putStrLn (unwords miss)
+gr :: IO PGF
+gr = readPGF "./Communication.pgf"
+
+langs :: IO [Language]
+langs = liftM languages gr
+
+lang :: IO Language
+lang = liftM head langs
+
+morpho :: IO Morpho
+morpho = liftM2 buildMorpho gr lang
+
+liftOp :: Monad m => (a -> b -> c) -> m a -> b -> m c
+liftOp f a b = a >>= \a' -> return (f a' b)
+
+miss :: [String] -> IO [String]
+miss ws =
+	liftOp morphoMissing morpho ws
 
 ans tests = do
   gr	<- readPGF "./Communication.pgf"
