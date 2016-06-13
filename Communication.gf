@@ -83,12 +83,12 @@ fun
 	between	: Prep;
 	at	: Prep;
 	to	: Prep;
-	with_prep	: PatientPrep;
+	with_PREP	: PatientPrep;
 	as	: MannerPrep;
 	by	: ThemePrep;
-	in_prep	: Prep;
-	in_manner	: MannerPrep;
-	in_loc	: LocPrep;
+	in_PREP	: Prep;
+	in_MANNER	: MannerPrep;
+	in_LOC	: LocPrep;
 	into	: Prep;
 
 -- Pron

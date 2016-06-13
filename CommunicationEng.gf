@@ -85,12 +85,12 @@ lin
 	between	= mkPrep "between";
 	at	= mkPrep "at";
 	to	= mkPrep "to";
-	with_prep	= mkPrep "with";
+	with_PREP	= mkPrep "with";
 	as	= mkPrep "as";
 	by	= mkPrep "by";
-	in_prep	= mkPrep "in";
-	in_manner	= mkPrep "in";
-	in_loc	= mkPrep "in";
+	in_PREP	= mkPrep "in";
+	in_MANNER	= mkPrep "in";
+	in_LOC	= mkPrep "in";
 	into	= mkPrep "into";
 
 -- Pron
