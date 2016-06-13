@@ -2,6 +2,8 @@ module Tests where
 
 import Control.Monad
 import Data.Maybe
+import Data.Char
+import Data.List
 
 import Data.DRS
 
@@ -10,7 +12,6 @@ import Communication
 import Representation
 import Evaluation
 import Model
-import WordsCharacters
 
 -- handler gr core tests = putStr $ unlines $ map (\(x,y) -> x++show y) $ zip (map (++"\t") tests ) ( map (\string -> map (\x -> core ( x) ) (parse gr (mkCId "DicksonEng") (startCat gr) string)) tests )
 
@@ -35,23 +36,39 @@ miss :: [String] -> IO [String]
 miss ws =
 	liftOp morphoMissing morpho ws
 
+cat2funs :: String -> IO ()
+cat2funs cat = do
+	gr' <- gr
+	let fs = functionsByCat gr' (mkCId cat)
+	let ws = filter (isLower . head . showCId) fs
+	putStrLn (unwords (map showCId ws))
+
+catByPOS :: String -> IO ()
+catByPOS  pos = do
+	gr' <- gr
+	let allCats = categories gr'
+	let cats = filter (isPrefixOf pos . showCId) allCats
+	putStrLn (unwords (map showCId cats))
+
+trans = id
+
+run f tests = do
+  gr	<- readPGF "./Communication.pgf"
+  let ss = map (chomp . lc_first) tests
+  let ps = map ( parses gr ) ss
+  let ts = map f ps
+  let zs = zip (map (++"\t") tests) (map (map (showExpr []) ) ts)
+  putStrLn (unlines (map (\(x,y) -> x ++ (show y ) ) zs) )
+
 ans tests = do
   gr	<- readPGF "./Communication.pgf"
   let ss = map (chomp . lc_first) tests
   let ps = map ( parses gr ) ss
-  let ls = map (map ( (linear gr) <=< transform ) ) ps
-  let zs = zip (map (++"\t") tests) ls
+  let ts = map (map ( (linear gr) <=< transform ) ) ps
+  let zs = zip (map (++"\t") tests) ts
   putStrLn (unlines (map (\(x,y) -> x ++ (show $ unwords (map displayResult y))) zs) )
 
 displayResult = fromMaybe "Nothing"
-
-trans tests = do
-  gr	<- readPGF "./Communication.pgf"
-  let ss = map (chomp . lc_first) tests
-  let ps = map ( parses gr ) ss
-  let ls = map id ps
-  let zs = zip (map (++"\t") tests) (map (map (showExpr []) ) ps)
-  putStrLn (unlines (map (\(x,y) -> x ++ (show y ) ) zs) )
 
 reps tests = do
   gr	<- readPGF "./Communication.pgf"
