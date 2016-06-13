@@ -15,7 +15,7 @@ cat2funs cat = do
 	gr' <- gr
 	let fs = functionsByCat gr' (mkCId cat)
 	let ws = filter (isLower . head . showCId) fs
-	let is = map (reverse . dropWhile (\x ->  (==) x '_' || isUpper x) . reverse .showCId ) ws
+	let is = map (reverse . dropWhile (\x ->  (==) x '_' || isUpper x || isNumber x) . reverse .showCId ) ws
 	return (map mkCId is )
 
 gfWords :: [(String, IO [CId])]
@@ -95,27 +95,6 @@ aux = [
 	, "should"
 	]
 	
-
-conj = [
-
-	"once"
-	, "and"
-	, "but"
-
-	]
-
-
-det = [
-	"'s"
-	, "some"
-	, "no"
-	, "0, _ or zero"
-	, "a"
-	, "an"
-	, "no"
-	, "the"
-
-	]
 
 pron = [
 	"who"
