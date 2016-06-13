@@ -172,27 +172,27 @@ fun
 	ApposNP	: NP -> NP -> NP;
 	NPPostPredet	: NP -> Predet -> NP;
 
-	a_Det : Det; -- (\d,f -> exists (\x -> and (d x) (f x)));
+	a_DET : Det; -- (\d,f -> exists (\x -> and (d x) (f x)));
 	zero_Det_pl : Det; -- (\d,f -> exists (\x -> and (d x) (f x)));
 	zero_Det_sg : MassDet;
-	the_mass_Det	: MassDet;
-	some_mass_Det	: MassDet;
-	any_mass_Det	: MassDet;
-	theSg_Det : Det; -- (\d,f -> exists (\x -> and (d x) (f x)));
-	thePlural_Det : Det; -- (\d,f -> exists (\x -> and (d x) (f x)));
+	the_MASS_DET	: MassDet;
+	some_MASS_DET	: MassDet;
+	any_MASS_DET	: MassDet;
+	the_SG_DET : Det; -- (\d,f -> exists (\x -> and (d x) (f x)));
+	the_PLURAL_DET : Det; -- (\d,f -> exists (\x -> and (d x) (f x)));
 	Apos  : NP -> Det;
 	MassApos	: NP -> MassDet;
 	Apos_pl  : NP -> Det;
-	no_Det	: Det;
-	no_pl_Det	: Det;
+	no_DET	: Det;
+	no_PL_DET	: Det;
 	no_NP	: NP;
-	no_pl_NP	: NP;
-	no_MassDet	: MassDet;
-	some_Det	: Det;
-	some_pl_Det	: Det;
+	no_PL_NP	: NP;
+	no_MASSDET	: MassDet;
+	some_DET	: Det;
+	some_PL_DET	: Det;
 	some_NP	: NP;
-	some_pl_NP	: NP;
-	some_Predet	: Predet;
+	some_PL_NP	: NP;
+	some_PREDET	: Predet;
 	List : NP -> NP -> ListNP;
 	AddList : NP -> ListNP -> ListNP;
 	CloseList	: Conj -> ListNP -> NP;
@@ -202,9 +202,9 @@ fun
 	ConcatS	: Conj -> S -> S -> S;
 	PreConjUtt	: Conj -> Utt -> Utt;
 
-	her_Det	: Det;
-	her_MassDet	: MassDet;
-	he_Det	: Det;
+	her_DET	: Det;
+	her_MASSDET	: MassDet;
+	his_DET	: Det;
 	its	: Det;
 	your	: Det;
 	their	: Det;
@@ -213,16 +213,16 @@ fun
 	he	: NP;
 	she	: NP;
 	it	: NP;
-	that_Pron	: NP;
-	this_Pron	: NP;
+	that_PRON	: NP;
+	this_PRON	: NP;
 	they	: NP;
 	you	: NP;
 	we	: NP;
 
 	who_WH	: IP;
 	what_WH	: IP;
-	whatPl_IDet	: IDet;
-	whichSg_IDet	: IDet;
+	what_PL_IDET	: IDet;
+	which_SG_IDET	: IDet;
 	how_WH	: IAdv;
 	who_RP	: RP;
 	that_RP	: RP;
@@ -242,14 +242,14 @@ fun
 	VP_AP	: VP -> AP;
 	VP_NP_AP	: VPSlash -> NP -> AP;
 
-	about_prep	: Prep;
-	at_prep	: LocPrep;
-	before_prep	: Prep;
-	from_prep	: Prep;
-  like_prep	: Prep;
-	of_prep	: Prep;
+	about_PREP	: Prep;
+	at_PREP	: LocPrep;
+	before_PREP	: Prep;
+	from_PREP	: Prep;
+  like_PREP	: Prep;
+	of_PREP	: Prep;
 	part_prep	: Prep;
-	up_prep	: Prep;
+	up_PREP	: Prep;
 
 	person	: CN;
 	thing	: CN;
@@ -264,11 +264,11 @@ fun
 	Very_Adv	: Adv -> Adv;
 	In_order_to : VP -> Adv;
 	To_purpose	: VP -> Adv;
-	because_Subj	: Subj;
-	if_Subj	: Subj;
-	when_Subj	: Subj;
-	so_Subj	: Subj;
-	or_Conj	: Conj;
+	because_SUBJ	: Subj;
+	if_SUBJ	: Subj;
+	when_SUBJ	: Subj;
+	so_SUBJ	: Subj;
+	or_CONJ	: Conj;
 
 	Subjunct	: Subj -> S -> SubordCl;
 

@@ -431,26 +431,26 @@ lin
 	a_Det	= a_Det;
 	zero_Det_pl	= aPl_Det;
 	zero_Det_sg	= mkDet zero_mass_Quant singularNum;
-	the_mass_Det	= theSg_Det;
-	some_mass_Det = mkDet some_Quant singularNum;
-	any_mass_Det = mkDet any_Quant singularNum;
-	theSg_Det	= theSg_Det;
-	thePlural_Det = thePl_Det;
+	the_MASS_DET	= theSg_Det;
+	some_MASS_DET = mkDet some_Quant singularNum;
+	any_MASS_DET = mkDet any_Quant singularNum;
+	the_SG_DET	= theSg_Det;
+	the_PLURAL_DET = thePl_Det;
 	Apos np	= mkDet (GenNP np);
 	MassApos np	= mkDet (GenNP np);
 	Apos_pl np	= mkDet (GenNP np) pluralNum;
-	no_Det	= mkDet no_Quant;
-	no_pl_Det	= mkDet no_Quant pluralNum;
+	no_DET	= mkDet no_Quant;
+	no_PL_DET	= mkDet no_Quant pluralNum;
 	no_NP = mkNP( mkDet no_Quant);
-	no_pl_NP = mkNP( mkDet no_Quant pluralNum);
-	no_MassDet = mkDet no_Quant;
-	some_Predet	= ss "some of";
-	some_Det = mkDet some_Quant;
-	some_pl_Det = mkDet some_Quant pluralNum;
+	no_PL_NP = mkNP( mkDet no_Quant pluralNum);
+	no_MASSDET = mkDet no_Quant;
+	some_PREDET	= ss "some of";
+	some_DET = mkDet some_Quant;
+	some_PL_DET = mkDet some_Quant pluralNum;
 	some_NP = mkNP( mkDet some_Quant);
-	some_pl_NP = mkNP( mkDet some_Quant pluralNum);
-	that_Pron = mkNP (mkDet that_Quant);
-	this_Pron = mkNP (mkDet this_Quant);
+	some_PL_NP = mkNP( mkDet some_Quant pluralNum);
+	that_PRON = mkNP (mkDet that_Quant);
+	this_PRON = mkNP (mkDet this_Quant);
 	List np1 np2 = mkListNP np1 np2;
 	AddList np list = mkListNP np list;
 	CloseList conj list = mkNP conj list;
@@ -460,9 +460,9 @@ lin
 	ConcatS	conj s1 s2 = mkS conj s1 s2;
 	PreConjUtt conj utt = mkPhr (mkPConj conj) utt;
 
-	her_Det	= mkDet she_Pron;
-	her_MassDet	= mkDet she_Pron;
-	he_Det	= mkDet he_Pron;
+	her_DET	= mkDet she_Pron;
+	her_MASSDET	= mkDet she_Pron;
+	his_DET	= mkDet he_Pron;
 	its	= mkDet it_Pron;
 	your	= mkDet youSg_Pron;
 	their	= mkDet they_Pron;
@@ -477,8 +477,8 @@ lin
 
 	who_WH	= mymkIP "who" "who" "whose" Sg;
 	what_WH	= whatSg_IP;
-	whatPl_IDet = { s = "what"; n = Pl };
-	whichSg_IDet = { s = "which"; n = Sg };
+	what_PL_IDET = { s = "what"; n = Pl };
+	which_SG_IDET = { s = "which"; n = Sg };
 	how_WH	= how_IAdv;
 	that_RP	= ExtraEng.that_RP;
 	who_RP	= mymkRP "who" "which" "whose";
@@ -497,14 +497,14 @@ lin
 	VP_AP vp = PresPartAP vp;
 	VP_NP_AP vp np = PastPartAgentAP vp np;
 
-  about_prep	= P.mkPrep "about";
-  at_prep	= P.mkPrep "at";
-	before_prep	= P.mkPrep "before";
-  from_prep	= P.mkPrep "from";
-  like_prep	= P.mkPrep "like";
-	of_prep	= possess_Prep;
+  about_PREP	= P.mkPrep "about";
+  at_PREP	= P.mkPrep "at";
+	before_PREP	= P.mkPrep "before";
+  from_PREP	= P.mkPrep "from";
+  like_PREP	= P.mkPrep "like";
+	of_PREP	= possess_Prep;
   part_prep	= part_Prep;
-  up_prep	= P.mkPrep "up";
+  up_PREP	= P.mkPrep "up";
 
 	person	= mkCN( P.mkN Masc ( P.mkN "person" "people"));
 	thing	= mkCN( P.mkN Neutr ( P.mkN "thing"));
@@ -518,11 +518,11 @@ lin
 	Very_Adv a = ParadigmsEng.mkAdv ("very" ++ a.s);
 	In_order_to vp = myPurposeAdv "in order" vp;
 	To_purpose vp	= myPurposeAdv "" vp;
-	because_Subj	= because_Subj;
-	if_Subj	= if_Subj;
-	when_Subj = when_Subj;
-	so_Subj	= P.mkSubj "so";
-	or_Conj	= or_Conj;
+	because_SUBJ	= because_Subj;
+	if_SUBJ	= if_Subj;
+	when_SUBJ = when_Subj;
+	so_SUBJ	= P.mkSubj "so";
+	or_CONJ	= or_Conj;
 
 	Subjunct subj s	= mkAdv subj s;
 
