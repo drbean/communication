@@ -82,7 +82,7 @@ repS (GQUt (GPosQ (GYN (GSentence np (GVP_Adv_instrument (GPass (GV2ASlash v ap)
 repS (GQUt (GPosQ (GYN (GSentence np (GVP_Adv_instrument (GPass vp) pp))))) =
 	repS (GQUt (GPosQ (GYN (GSentence np (GPass vp)))))
 repS (GQUt (GPosQ (GYN (GSentence np (GPass (GV2ASlash v ap)))))) =
-	repS (GQUt (GPosQ (GYN (GSentence (GItem Ga_Det Gentity) (GV_NP_AP v np ap)))))
+	repS (GQUt (GPosQ (GYN (GSentence (GItem Ga_DET Gentity) (GV_NP_AP v np ap)))))
 
 repS (GQUt (GPosQ (GYN (GSentence np vp)))) = Just (repNP np (repVP vp))
 repS (GQUt (GNegQ (GYN (GSentence np vp)))) =
@@ -103,13 +103,13 @@ new np rs = let
 	r':rs' = newDRSRefs [int2ref max] es in r'
 
 newOnPart :: GPartitive -> [DRSRef] -> DRSRef
-newOnPart _ rs = new (GItem Ga_Det Gperson) rs
+newOnPart _ rs = new (GItem Ga_DET Gperson) rs
 
 newOnPos :: GN2 -> [DRSRef] -> DRSRef
-newOnPos _ rs = new (GItem Ga_Det Gperson) rs
+newOnPos _ rs = new (GItem Ga_DET Gperson) rs
 
 newOnPlace :: GPlace -> [DRSRef] -> DRSRef
-newOnPlace _ rs = new (GItem Ga_Det Gperson) rs
+newOnPlace _ rs = new (GItem Ga_DET Gperson) rs
 
 repNP :: GNP -> (DRSRef -> DRS) -> DRSRef -> DRS
 repNP (GItem det cn) p r = repDet det (repCN cn) p r
@@ -189,15 +189,15 @@ repNP Ghe p r = let
 
 
 repDet :: GDet -> (DRSRef -> DRS) -> (DRSRef -> DRS) -> DRSRef -> DRS
-repDet Ga_Det = \ p q r-> let
+repDet Ga_DET = \ p q r-> let
 	DRS prs pconds = p r
 	DRS qrs qconds = q (maximum prs)
 	len = ref2int (maximum qrs)
 	reflist = newDRSRefs (replicate len (DRSRef "r")) []
 	conds = pconds ++ qconds
 	in DRS reflist conds
-repDet Gno_Det = repDet Ga_Det
-repDet Gher_Det = \ p q dummy-> let
+repDet Gno_DET = repDet Ga_DET
+repDet Gher_DET = \ p q dummy-> let
 	iminus = ref2int dummy - 1
 	rolled_ref = int2ref iminus
 	her_refs = case dummy of
@@ -219,7 +219,7 @@ repDet Gher_Det = \ p q dummy-> let
 	have r thing = Rel (DRSRel "have") [r, thing]
 	false :: DRSCon
 	false = Rel (DRSRel "true") [DRSRef "r1"]
-repDet Ghe_Det = \ p q dummy-> let
+repDet Ghis_DET = \ p q dummy-> let
 	iminus = ref2int dummy - 1
 	rolled_ref = int2ref iminus
 	he_refs = case dummy of
@@ -241,14 +241,14 @@ repDet Ghe_Det = \ p q dummy-> let
 	have r thing = Rel (DRSRel "have") [r, thing]
 	false :: DRSCon
 	false = Rel (DRSRel "true") [DRSRef "r1"]
-repDet Gsome_Det = repDet Ga_Det
-repDet GtheSg_Det = repDet Ga_Det
-repDet Gsome_pl_Det = repDet Gsome_Det
-repDet Gzero_Det_pl = repDet Gsome_pl_Det
-repDet GthePlural_Det =  repDet Gsome_pl_Det
+repDet Gsome_DET = repDet Ga_DET
+repDet Gthe_SG_DET = repDet Ga_DET
+repDet Gsome_PL_DET = repDet Gsome_DET
+repDet Gzero_Det_pl = repDet Gsome_PL_DET
+repDet Gthe_PLURAL_DET =  repDet Gsome_PL_DET
 repDet (GApos np) = case np of
-	Gshe -> repDet Gher_Det
-	Ghe -> repDet Ghe_Det
+	Gshe -> repDet Gher_DET
+	Ghe -> repDet Ghis_DET
 	_ -> \p q r -> let
 		len = ref2int r
 		owner = r
@@ -271,7 +271,7 @@ repMassDet Gzero_Det_sg = \ p q r-> let
 	reflist = newDRSRefs (replicate len (DRSRef "r")) []
 	conds = pconds ++ qconds
 	in DRS reflist conds
-repMassDet Gthe_mass_Det = repMassDet Gzero_Det_sg
+repMassDet Gthe_MASS_DET = repMassDet Gzero_Det_sg
 repMassDet (GMassApos owner) = \p q r -> let
 	len = ref2int r
 	iminus = len - 1
@@ -466,7 +466,7 @@ repVP (GV_that_S v0 (GPosS (GSentence np vp))) = case vp of
 	(GPass (GV2Slash v) ) -> \r -> repNP np (\patient -> (\agent ->
 		DRS [r,patient,agent] [Rel (DRSRel (lin v0)) [r, DRSRef "p"]
 		, Prop (DRSRef "p") (DRS [] [Rel (DRSRel (lin v)) [agent, patient]] ) ])
-		(new (GItem Ga_Det Gperson) [r,patient]) ) (new np [r])
+		(new (GItem Ga_DET Gperson) [r,patient]) ) (new np [r])
 repVP (GV_S v0 (GPosS (GSentence np vp))) = 
 	repVP (GV_that_S v0 (GPosS (GSentence np vp)))
 repVP (GV_that_S v0 (GNegS (GSentence np vp))) = case vp of
@@ -654,7 +654,7 @@ repW Gwho_WH p r = let
 	reflist = newDRSRefs (replicate len (DRSRef "r")) [] in
 	DRS reflist ( person : conds)
 repW (GWHose cn) p r = let
-	owned = new (GItem Ga_Det cn) [r]
+	owned = new (GItem Ga_DET cn) [r]
 	ownership_conds =  [ Rel (DRSRel "have") [r, owned] ]
 	DRS rs conds = repCN cn owned
 	DRS prs pconds = p owned
