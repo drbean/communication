@@ -28,7 +28,7 @@ gfWords = [
 	, ("N",n)
 	, ("CN",cn)
 	, ("PN",pn)
-	-- , ("Pron",pron)
+	, ("Pron",pron)
 	, ("Prep",prep)
 	-- , ("Rel",rel)
 	, ("Tag",tag)
@@ -70,6 +70,7 @@ n	= cat2funs "N"
 cn	= cat2funs "CN"
 pn	= cat2funs "PN"
 prep	= cat2funs "Prep"
+pron	= cat2funs "NP"
 v	= cat2funs "V"
 v2	= cat2funs "V2"
 v3	= cat2funs "V3"
@@ -95,29 +96,6 @@ aux = [
 	, "should"
 	]
 	
-
-pron = [
-	"who"
-	, "their"
-	, "them"
-	, "themselves"
-	, "they"
-	, "this"
-	, "we"
-	, "when"
-	, "where"
-	, "your"
-	, "both"
-	, "that"
-	, "what"
-	, "which"
-	, "you"
-	, "how"
-	, "she"
-	, "her"
-	, "he"
-	, "his"
-	]
 
 rel = [
 
